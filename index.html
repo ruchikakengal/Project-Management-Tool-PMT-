@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>ProjectZen - Project Management Tool</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">ProjectZen</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-briefcase' ></i>
+					<span class="text">Project Management</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-user' ></i>
+					<span class="text">User Profiles</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-report' ></i>
+					<span class="text">Reports</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+                    <i class='bx bx-brightness-half' ></i>
+					<span class="text">About</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-wrench' ></i>
+					<span class="text">Tasks</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-check-shield' ></i>
+					<span class="text">Security</span> 
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-mail-send' ></i>
+					<span class="text">Mail Send</span>
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-bot' ></i>
+					<span class="text">ChatBot</span>    
+				</a>
+			</li>
+            <li>
+				<a href="#">
+					<i class='bx bx-select-multiple' ></i>
+					<span class="text">Project Submition</span>
+				</a>
+			</li>
+        </ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<a href="sign.html" class="signup">SignIn/Up</a>
+			
+            <div class="toggle-container">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="toggle-label">
+                    <span id="darkModeIcon"><i class="bx bx-moon"></i></span>
+                </label>
+            </div>
+            
+		</nav>
+		<!-- NAVBAR -->
+
+
+		<!-- MAIN -->
+        <div class="dashboard">
+            <h1>Project Management Dashboard</h1>
+            <p>Track, manage, and optimize your projects efficiently.</p>
+    
+            <div class="analytics">
+                <div class="card"><h3>Total Projects</h3><p>15</p></div>
+                <div class="card"><h3>Ongoing Projects</h3><p>6</p></div>
+                <div class="card"><h3>Completed Projects</h3><p>9</p></div>
+            </div>
+    
+            <div class="chart-container">
+                <canvas id="projectChart"></canvas>
+            </div>
+    
+            <div class="projects">
+                <h3>Ongoing Projects</h3>
+                <button id="addProject" class="btn">+ Add Project</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Deadline</th>
+                            <th>Progress</th>
+                            <th>Team Members</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Website Redesign</td>
+                            <td>25-02-2025</td>
+                            <td>60%</td>
+                            <td>John, Lisa</td>
+                            <td>Medium</td>
+                            <td><span class="status ongoing">Ongoing</span></td>
+                            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Develop API</td>
+                            <td>26-02-2025</td>
+                            <td>70%</td>
+                            <td>Mahi, Lisa,Rashi</td>
+                            <td>High</td>
+                            <td><span class="status ongoing">Ongoing</span></td>
+                            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Testing & Debugging</td>
+                            <td>23-02-2025</td>
+                            <td>80%</td>
+                            <td>mahira,Gourav,Himanshu</td>
+                            <td>Medium</td>
+                            <td><span class="status ongoing">Ongoing</span></td>
+                            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>Backend Optimization</td>
+                            <td>25-02-2025</td>
+                            <td>90%</td>
+                            <td>Sahil,Devashish,Falguni,Rucha</td>
+                            <td>High</td>
+                            <td><span class="status ongoing">Ongoing</span></td>
+                            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>UI Enhancements</td>
+                            <td>22-02-2025</td>
+                            <td>80%</td>
+                            <td>Janvi,Khushi,Richa,Gourav,Dinesh</td>
+                            <td>Medium</td>
+                            <td><span class="status ongoing">Ongoing</span></td>
+                            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="tasks">
+                <h3>Task List</h3>
+                <button id="addTask" class="btn">Add Task</button>
+                <ul>
+                    <li>✅ Design Homepage - Assigned to: Joun - Due: 22-02-2025</li>
+                    <li>🔄 Develop API - Assigned to: Rucha - Due: 28-02-2025</li>
+                    <li>🛠️ Backend Optimization - Assigned to: Rucha - Due: 05-03-2025</li>
+                    <li>🎨 UI Enhancements - Assigned to: David - Janvi: 10-03-2025</li>
+                    <li>📄 Write Documentation - Assigned to: Emily - Due: 15-03-2025</li>
+                    <li>📊 Testing & Debugging - Assigned to: Himanshu - Due: 20-03-2025</li>
+                    <li>🚀 Deployment & Launch - Assigned to: Gourav - Due: 25-03-2025</li>
+                </ul>
+            </div>
+
+        <script>
+            const ctx = document.getElementById('projectChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Completed', 'Ongoing', 'Pending'],
+                    datasets: [{
+                        data: [9, 6, 2],
+                        backgroundColor: ['#4caf50', '#ff9800', '#f44336']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        </script>
+
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+
+	<script src="script.js"></script>
+    <script>
+ document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("checkbox");
+    const body = document.body;
+    const darkModeIcon = document.getElementById("darkModeIcon");
+
+    // Check if user has a saved preference
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark");
+        checkbox.checked = true;
+        darkModeIcon.innerHTML = '<i class="bx bx-sun"></i>'; // Show Sun icon
+    } else {
+        darkModeIcon.innerHTML = '<i class="bx bx-moon"></i>'; // Show Moon icon
+    }
+
+    // Toggle theme on switch change
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            body.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+            darkModeIcon.innerHTML = '<i class="bx bx-sun"></i>'; // Show Sun icon
+        } else {
+            body.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+            darkModeIcon.innerHTML = '<i class="bx bx-moon"></i>'; // Show Moon icon
+        }
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>
