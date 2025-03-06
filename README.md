@@ -1,5 +1,5 @@
 # Project-Management-Tool-PMT-Project
-# 📊 **Full Stack Project Management Tool PMT ** 📅
+# 📊 Full Stack Project Management Tool PMT 📅
 
 ## 💡 **Description**
 
